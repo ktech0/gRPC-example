@@ -1,0 +1,26 @@
+syntax="proto3";
+
+package mathproto;
+
+service Math {
+    rpc Plus (PlusRequest) returns (PlusResponse) {};
+    rpc Mult (MultRequest) returns (MultResponse) {};
+}
+
+message PlusRequest {
+    int64 A = 1;
+    int64 B = 2;
+}
+
+message PlusResponse {
+    int64 C = 1;
+}
+
+message MultRequest {
+    int64 A = 1;
+    int64 B = 2;
+}
+
+message MultResponse {
+    int64 C = 1;
+}
